@@ -189,14 +189,13 @@ export default function RegisterScreen() {
           transparent={true}
           visible={modalVisible}
           onRequestClose={() => {
-            //Alert.alert('Modal has been closed.');
             setModalVisible(!modalVisible);
           }}>
           <View style={styles.centeredView}>
             <View
               style={styles.modalView}
               accessible={true}
-              accessibilityLiveRegion="assertive">
+              accessibilityLiveRegion="assertive">{/* Force the screen reader to modal */}
               <Picker
                 accessibilityLabel="Select a language"
                 style={styles.picker}
